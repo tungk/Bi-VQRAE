@@ -13,13 +13,7 @@ If you use the code, please cite the following paper:
 
 ```latex
 @inproceedings{DBLP:conf/icde/KieuYGCZSJ22,
-	author     = {Tung Kieu and
-    			  Bin Yang and
-				  Chenjuan Guo and 
-				  Razvan-Gabriel Cirstea and 
-				  Yan Zhao and
-				  Yale Song and
-				  Christian S. Jensen},
+	author     = {Tung Kieu and Bin Yang and Chenjuan Guo and Razvan-Gabriel Cirstea and Yan Zhao and Yale Song and Christian S. Jensen},
 	title      = {Anomaly Detection in Time Series with Robust Variational Quasi-Recurrent Autoencoders},
 	booktitle  = {{ICDE}},
 	pages      = {1--13},
