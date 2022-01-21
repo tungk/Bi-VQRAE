@@ -11,17 +11,19 @@ The proposed VQRAEs employs a judiciously designed objective function based on r
 
 If you use the code, please cite the following paper:
 
-`@inproceedings{DBLP:conf/icde/KieuYGCZSJ22,`
-	`author    = {Tung Kieu and`
-    				     `Bin Yang and`
-					     `Chenjuan Guo and` 
-					     `Razvan-Gabriel Cirstea and` 
-					     `Yan Zhao and`
-					     `Yale Song and`
-					     `Christian S. Jensen},`
-	`title     	 = {Anomaly Detection in Time Series with Robust Variational Quasi-Recurrent Autoencoders},`
-	`booktitle = {{ICDE}},`
-	`pages      = {1--13},`
-	`year         = {2022}`
-`}`
+```latex
+@inproceedings{DBLP:conf/icde/KieuYGCZSJ22,
+	author     = {Tung Kieu and
+    			  Bin Yang and
+				  Chenjuan Guo and 
+				  Razvan-Gabriel Cirstea and 
+				  Yan Zhao and
+				  Yale Song and
+				  Christian S. Jensen},
+	title      = {Anomaly Detection in Time Series with Robust Variational Quasi-Recurrent Autoencoders},
+	booktitle  = {{ICDE}},
+	pages      = {1--13},
+	year       = {2022}
+}
+```
 
