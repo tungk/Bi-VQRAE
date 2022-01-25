@@ -31,7 +31,7 @@ outperforming state-of-the-art methods.
 <img src="https://render.githubusercontent.com/render/math?math=\mathbf{f}_{t} = \sigma(\mathbf{W}^{1}_{\mathbf{f}} \cdot \mathbf{s}_{t-1} + \mathbf{W}^{2}_{\mathbf{f}} \cdot \mathbf{s}_{t} + \mathbf{b}_\mathbf{f})">
 <img src="https://render.githubusercontent.com/render/math?math=\mathbf{o}_{t} = \sigma(\mathbf{W}^{1}_{\mathbf{o}} \cdot \mathbf{s}_{t-1} + \mathbf{W}^{2}_{\mathbf{o}} \cdot \mathbf{s}_{t} + \mathbf{b}_\mathbf{o})">
 <img src="https://render.githubusercontent.com/render/math?math=\mathbf{c}_{t} = \mathbf{f}_{t} \odot \mathbf{c}_{t-1} + (1 - \mathbf{f}_{t}) \odot \mathbf{i}_{t}">
-<img src="https://render.githubusercontent.com/render/math?math=\mathbf{h}_{t} &= \mathbf{o}_{t} \odot \mathbf{c}_{t}">
+<img src="https://render.githubusercontent.com/render/math?math=\mathbf{h}_{t} = \mathbf{o}_{t} \odot \mathbf{c}_{t}">
 
 
 ### qnet
@@ -42,7 +42,7 @@ outperforming state-of-the-art methods.
 <img src="https://render.githubusercontent.com/render/math?math=\mu_{\mathbf{z}_{t}} = \mathbf{W}_{\mu_{\mathbf{z}}} \cdot \Phi_{\mathbf{z}_{t}} + \mathbf{b}_{\mu_{\mathbf{z}}}">
 <img src="https://render.githubusercontent.com/render/math?math=\sigma_{\mathbf{z}_{t}} = \mathsf{softplus}(\mathbf{W}_{\sigma_{\mathbf{z}}} \cdot \Phi_{\mathbf{z}_{t}} + \mathbf{b}_{\sigma_{\mathbf{z}}})">
 
-<img src="q_net.png" alt="q_net" style="zoom:25%;" />
+<img src="q_net.png" alt="q_net" style="zoom:10%;" />
 
 ### qnet
 
@@ -50,7 +50,7 @@ outperforming state-of-the-art methods.
 <img src="https://render.githubusercontent.com/render/math?math=\mu_{\mathbf{s}_{t}} = \mathbf{W}_{\mu_{\mathbf{s}}} \cdot \Phi_{\mathbf{s}_{t}} + \mathbf{b}_{\mu_{\mathbf{s}}}">
 <img src="https://render.githubusercontent.com/render/math?math=\sigma_{\mathbf{s}_{t}} = \mathsf{softplus}(\mathbf{W}_{\sigma_{\mathbf{s}}} \cdot \Phi_{\mathbf{s}_{t}} + \mathbf{b}_{\sigma_{\mathbf{s}}})">
 
-<img src="p_net.png" alt="q_net" style="zoom:25%;" />
+<img src="p_net.png" alt="q_net" style="zoom:10%;" />
 
 ### Objective Function
 
