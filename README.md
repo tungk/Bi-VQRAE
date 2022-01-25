@@ -42,7 +42,7 @@ outperforming state-of-the-art methods.
 <img src="https://render.githubusercontent.com/render/math?math=\mu_{\mathbf{z}_{t}} = \mathbf{W}_{\mu_{\mathbf{z}}} \cdot \Phi_{\mathbf{z}_{t}} + \mathbf{b}_{\mu_{\mathbf{z}}}">
 <img src="https://render.githubusercontent.com/render/math?math=\sigma_{\mathbf{z}_{t}} = \mathsf{softplus}(\mathbf{W}_{\sigma_{\mathbf{z}}} \cdot \Phi_{\mathbf{z}_{t}} + \mathbf{b}_{\sigma_{\mathbf{z}}})">
 
-<img src="q_net.png" alt="q_net" style="zoom:5%;" />
+<img src="q_net.png" alt="q_net" style="zoom:1%;" />
 
 ### qnet
 
@@ -50,7 +50,7 @@ outperforming state-of-the-art methods.
 <img src="https://render.githubusercontent.com/render/math?math=\mu_{\mathbf{s}_{t}} = \mathbf{W}_{\mu_{\mathbf{s}}} \cdot \Phi_{\mathbf{s}_{t}} + \mathbf{b}_{\mu_{\mathbf{s}}}">
 <img src="https://render.githubusercontent.com/render/math?math=\sigma_{\mathbf{s}_{t}} = \mathsf{softplus}(\mathbf{W}_{\sigma_{\mathbf{s}}} \cdot \Phi_{\mathbf{s}_{t}} + \mathbf{b}_{\sigma_{\mathbf{s}}})">
 
-<img src="p_net.png" alt="q_net" style="zoom:5%;" />
+<img src="p_net.png" alt="q_net" style="zoom:1%;" />
 
 ### Objective Function
 
