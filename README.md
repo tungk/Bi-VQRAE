@@ -27,31 +27,45 @@ outperforming state-of-the-art methods.
 
 ### QRNN
 
-<img src="https://render.githubusercontent.com/render/math?math=\mathbf{i}_{t} = \mathsf{tanh}(\mathbf{W}^{1}_{\mathbf{i}} \cdot \mathbf{s}_{t-1} + \mathbf{W}^{2}_{\mathbf{i}} \cdot \mathbf{s}_{t} + \mathbf{b}_\mathbf{i}) \\ \mathbf{f}_{t} = \sigma(\mathbf{W}^{1}_{\mathbf{f}} \cdot \mathbf{s}_{t-1} + \mathbf{W}^{2}_{\mathbf{f}} \cdot \mathbf{s}_{t} + \mathbf{b}_\mathbf{f})">
+<img src="https://render.githubusercontent.com/render/math?math=\mathbf{i}_{t} = \mathsf{tanh}(\mathbf{W}^{1}_{\mathbf{i}} \cdot \mathbf{s}_{t-1} + \mathbf{W}^{2}_{\mathbf{i}} \cdot \mathbf{s}_{t} + \mathbf{b}_\mathbf{i})">
+<img src="https://render.githubusercontent.com/render/math?math=\mathbf{f}_{t} = \sigma(\mathbf{W}^{1}_{\mathbf{f}} \cdot \mathbf{s}_{t-1} + \mathbf{W}^{2}_{\mathbf{f}} \cdot \mathbf{s}_{t} + \mathbf{b}_\mathbf{f})">
+<img src="https://render.githubusercontent.com/render/math?math=\mathbf{o}_{t} = \sigma(\mathbf{W}^{1}_{\mathbf{o}} \cdot \mathbf{s}_{t-1} + \mathbf{W}^{2}_{\mathbf{o}} \cdot \mathbf{s}_{t} + \mathbf{b}_\mathbf{o})">
+<img src="https://render.githubusercontent.com/render/math?math=\mathbf{c}_{t} = \mathbf{f}_{t} \odot \mathbf{c}_{t-1} + (1 - \mathbf{f}_{t}) \odot \mathbf{i}_{t}">
+<img src="https://render.githubusercontent.com/render/math?math=\mathbf{h}_{t} &= \mathbf{o}_{t} \odot \mathbf{c}_{t}">
 
-\\begin{align}
-            \\mathbf{i}\_{t} &= \\mathsf{tanh}(\\mathbf{W}^{1}\_{\\mathbf{i}} \\cdot \\mathbf{s}\_{t-1} + \\mathbf{W}^{2}\_{\\mathbf{i}} \\cdot \\mathbf{s}\_{t} + \\mathbf{b}\_\\mathbf{i}) \\label{eqn:qrnn_1} \\\\
-            \\mathbf{f}\_{t} &= \\sigma(\\mathbf{W}^{1}\_{\\mathbf{f}} \\cdot \\mathbf{s}\_{t-1} + \\mathbf{W}^{2}\_{\\mathbf{f}} \\cdot \\mathbf{s}\_{t} + \\mathbf{b}\_\\mathbf{f}) \\label{eqn:qrnn_2}\\\\
-            \\mathbf{o}\_{t} &= \\sigma(\\mathbf{W}^{1}\_{\\mathbf{o}} \\cdot \\mathbf{s}\_{t-1} + \\mathbf{W}^{2}\_{\\mathbf{o}} \\cdot \\mathbf{s}\_{t} + \\mathbf{b}\_\\mathbf{o}) \\label{eqn:qrnn_3}\\\\
-            \\mathbf{c}\_{t} &= \\mathbf{f}\_{t} \\odot \\mathbf{c}\_{t-1} + (1 - \\mathbf{f}\_{t}) \\odot \\mathbf{i}\_{t} \\label{eqn:qrnn_4}\\\\
-            \\mathbf{h}\_{t} &= \\mathbf{o}\_{t} \\odot \\mathbf{c}\_{t} \\label{eqn:qrnn_5}
-        \\end{align}
-$$
 
 ### qnet
 
-$$
-\\begin{align}
-        \\mathbf{h}\_{t} &= \\mathsf{QRNN}(\\mathbf{s}\_{t-1}, \\mathbf{s}\_{t}) \\label{eqn:qnet_1}\\\\
-        \\mathbf{a}\_{t} &= \\mathsf{QRNN}(\[\\mathbf{s}\_{t+1}, \\mathbf{h}\_{t+1}\], \[\\mathbf{s}\_{t}, \\mathbf{h}\_{t}\]) \\label{eqn:qnet_2} \\\\
-        \\Phi\_{\\mathbf{z}\_{t}} &= f(\\mathbf{W}\_{\\Phi\_{\\mathbf{z}}} \\cdot \\mathbf{a}\_{t} + \\mathbf{b}\_{\\Phi\_{\\mathbf{z}}}) \\label{eqn:qnet_3} \\\\
-        \\mu\_{\\mathbf{z}\_{t}} &= \\mathbf{W}\_{\\mu\_{\\mathbf{z}}} \\cdot \\Phi\_{\\mathbf{z}\_{t}} + \\mathbf{b}\_{\\mu\_{\\mathbf{z}}} \\label{eqn:qnet_4} \\\\
-        \\sigma\_{\\mathbf{z}\_{t}} &= \\mathsf{softplus}(\\mathbf{W}\_{\\sigma\_{\\mathbf{z}}} \\cdot \\Phi\_{\\mathbf{z}\_{t}} + \\mathbf{b}\_{\\sigma\_{\\mathbf{z}}}) \\label{eqn:qnet_5}
-        \\end{align}
-$$
+<img src="https://render.githubusercontent.com/render/math?math=\mathbf{h}_{t} = \mathsf{QRNN}(\mathbf{s}_{t-1}, \mathbf{s}_{t})">
+<img src="https://render.githubusercontent.com/render/math?math=\mathbf{a}_{t} = \mathsf{QRNN}([\mathbf{s}_{t+1}, \mathbf{h}_{t+1}], [\mathbf{s}_{t}, \mathbf{h}_{t}])">
+<img src="https://render.githubusercontent.com/render/math?math=\Phi_{\mathbf{z}_{t}} = f(\mathbf{W}_{\Phi_{\mathbf{z}}} \cdot \mathbf{a}_{t} + \mathbf{b}_{\Phi_{\mathbf{z}}})">
+<img src="https://render.githubusercontent.com/render/math?math=\mu_{\mathbf{z}_{t}} = \mathbf{W}_{\mu_{\mathbf{z}}} \cdot \Phi_{\mathbf{z}_{t}} + \mathbf{b}_{\mu_{\mathbf{z}}}">
+<img src="https://render.githubusercontent.com/render/math?math=\sigma_{\mathbf{z}_{t}} = \mathsf{softplus}(\mathbf{W}_{\sigma_{\mathbf{z}}} \cdot \Phi_{\mathbf{z}_{t}} + \mathbf{b}_{\sigma_{\mathbf{z}}})">
 
-<img src="D:\Source Code\(Bi)-VQRAE\q_net.png" alt="q_net" style="zoom:25%;" />
+<img src="q_net.png" alt="q_net" style="zoom:25%;" />
 
-### pnet
+### qnet
 
-$$ \\begin{align} *{*{t}} &= f(*{*{}} \[
+<img src="https://render.githubusercontent.com/render/math?math=\Phi_{\mathbf{s}_{t}} = f(\mathbf{W}_{\Phi_{\mathbf{s}}} \cdot [\mathbf{h}_{t}, \mathbf{z}_{t}] + \mathbf{b}_{\Phi_{\mathbf{s}}})">
+<img src="https://render.githubusercontent.com/render/math?math=\mu_{\mathbf{s}_{t}} = \mathbf{W}_{\mu_{\mathbf{s}}} \cdot \Phi_{\mathbf{s}_{t}} + \mathbf{b}_{\mu_{\mathbf{s}}}">
+<img src="https://render.githubusercontent.com/render/math?math=\sigma_{\mathbf{s}_{t}} = \mathsf{softplus}(\mathbf{W}_{\sigma_{\mathbf{s}}} \cdot \Phi_{\mathbf{s}_{t}} + \mathbf{b}_{\sigma_{\mathbf{s}}})">
+
+<img src="p_net.png" alt="q_net" style="zoom:25%;" />
+
+### Objective Function
+
+<img src="https://render.githubusercontent.com/render/math?math=argmax_{\phi, \theta}\mathcal{L}(\mathbf{s}_{t} = - \mathbb{E}_{q_{\phi}(\mathbf{z}_{t}|\mathbf{s}_{t})}[\mathsf{D}_{\alpha,\beta,\gamma}(\hat{p}(\mathbf{s}_{t})||p_{\theta}(\mathbf{s}_{t}|\mathbf{z}_{t}))] - \mathsf{D_{KL}}[q_{\phi}(\mathbf{z}_{t}|\mathbf{s}_{t})||p_{\theta}(\mathbf{z}_{t})]">
+
+## Citation
+
+If you use the code, please cite the following paper:
+
+```latex
+@inproceedings{DBLP:conf/icde/KieuYGCZSJ22,
+	author     = {Tung Kieu and Bin Yang and Chenjuan Guo and Razvan-Gabriel Cirstea and Yan Zhao and Yale Song and Christian S. Jensen},
+	title      = {Anomaly Detection in Time Series with Robust Variational Quasi-Recurrent Autoencoders},
+	booktitle  = {{ICDE}},
+	pages      = {1--13},
+	year       = {2022}
+}
+```
