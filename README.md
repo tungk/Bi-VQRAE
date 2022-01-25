@@ -27,7 +27,7 @@ outperforming state-of-the-art methods.
 
 ### QRNN
 
-<img src="https://render.githubusercontent.com/render/math?math=\mathbf{i}_{t} = \mathsf{tanh}(\mathbf{W}^{1}_{\mathbf{i}} \cdot \mathbf{s}_{t-1} + \mathbf{W}^{2}_{\mathbf{i}} \cdot \mathbf{s}_{t} + \mathbf{b}_\mathbf{i})">
+<img src="https://render.githubusercontent.com/render/math?math=\mathbf{i}_{t} = \mathsf{tanh}(\mathbf{W}^{1}_{\mathbf{i}} \cdot \mathbf{s}_{t-1} \+ \mathbf{W}^{2}_{\mathbf{i}} \cdot \mathbf{s}_{t} + \mathbf{b}_\mathbf{i})">
 <img src="https://render.githubusercontent.com/render/math?math=\mathbf{f}_{t} = \sigma(\mathbf{W}^{1}_{\mathbf{f}} \cdot \mathbf{s}_{t-1} + \mathbf{W}^{2}_{\mathbf{f}} \cdot \mathbf{s}_{t} + \mathbf{b}_\mathbf{f})">
 <img src="https://render.githubusercontent.com/render/math?math=\mathbf{o}_{t} = \sigma(\mathbf{W}^{1}_{\mathbf{o}} \cdot \mathbf{s}_{t-1} + \mathbf{W}^{2}_{\mathbf{o}} \cdot \mathbf{s}_{t} + \mathbf{b}_\mathbf{o})">
 <img src="https://render.githubusercontent.com/render/math?math=\mathbf{c}_{t} = \mathbf{f}_{t} \odot \mathbf{c}_{t-1} + (1 - \mathbf{f}_{t}) \odot \mathbf{i}_{t}">
