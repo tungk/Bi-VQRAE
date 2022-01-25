@@ -27,7 +27,7 @@ outperforming state-of-the-art methods.
 
 ### QRNN
 
-<img src="https://render.githubusercontent.com/render/math?math=\\mathbf{i}\_{t} &= \\mathsf{tanh}(\\mathbf{W}^{1}\_{\\mathbf{i}} \\cdot \\mathbf{s}\_{t-1} + \\mathbf{W}^{2}\_{\\mathbf{i}} \\cdot \\mathbf{s}\_{t} + \\mathbf{b}\_\\mathbf{i})">
+<img src="https://render.githubusercontent.com/render/math?math= \mathbf{h}\_{t} &= \mathsf{QRNN}(\mathbf{s}\_{t-1}, \mathbf{s}\_{t})">
 
 \\begin{align}
             \\mathbf{i}\_{t} &= \\mathsf{tanh}(\\mathbf{W}^{1}\_{\\mathbf{i}} \\cdot \\mathbf{s}\_{t-1} + \\mathbf{W}^{2}\_{\\mathbf{i}} \\cdot \\mathbf{s}\_{t} + \\mathbf{b}\_\\mathbf{i}) \\label{eqn:qrnn_1} \\\\
