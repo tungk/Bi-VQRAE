@@ -27,6 +27,8 @@ outperforming state-of-the-art methods.
 
 ### qnet
 
+<img src="https://latex.codecogs.com/svg.image?\frac{1}{2}\int&space;log(p(s_t||(s_t|z_t|)))" title="\frac{1}{2}\int log(p(s_t||(s_t|z_t|)))" />
+
 <img src="q_net.png" alt="q_net" width="500" height="500" />
 
 ### qnet
